@@ -19,7 +19,13 @@ jobs:
           /home/runner/work/swift-aur/swift-aur/swift-language-git/src/sccache
           /var/cache/pacman/pkg/
         key: swift-language-git-sccache
-
+    - name: build latest runc
+      run: |
+        sudo apt-get install libseccomp-dev
+        git clone https://github.com/opencontainers/runc
+        cd runc
+        make
+        sudo make install
     - name: Build swift-language-git AUR
       uses: ProfFan/build-aur-action@0.0.4
       with:
