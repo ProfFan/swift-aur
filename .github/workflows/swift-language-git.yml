@@ -27,7 +27,7 @@ jobs:
         make
         sudo make install
     - name: Build swift-language-git AUR
-      uses: ProfFan/build-aur-action@0.0.5
+      uses: ProfFan/build-aur-action@0.0.6
       with:
         # AUR repository name to build
         repo-name: swift-language-git
